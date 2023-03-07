@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xac nhan thanh toan</title>
+  </head>
+  <body>
+    <h1>Xin chao ${fullname}</h1>
+    <p>Phone: ${phone}</p>
+    <p>Address: ${address}</p>
+    <table>
+      <thead>
+        <tr>
+          <th>
+            <strong>Image</strong>
+          </th>
+          <th>
+            <strong>Product</strong>
+          </th>
+          <th>
+            <strong>Price</strong>
+          </th>
+          <th>
+            <strong>Quantity</strong>
+          </th>
+          <th>
+            <strong>Total</strong>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {cart.products.map(product=> (
+        <tr>
+          <td>
+            <img src="{product.img1}" alt="..." width="70" />
+          </td>
+          <td>
+            <div>{product.nameProduct}</div>
+          </td>
+          <td>
+            <p>{product.priceProduct}</p>
+          </td>
+          <td>{product.count}</td>
+          <td>
+            <p>total</p>
+          </td>
+        </tr>
+        )) }
+      </tbody>
+    </table>
+  </body>
+</html>
